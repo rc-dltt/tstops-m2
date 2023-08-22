@@ -84,7 +84,7 @@ const AllRaceHorsePage = () => {
                 style={{
                     backgroundColor: isDarkMode ? Colors.black : Colors.white,
                 }}>
-                <Section title="Query - All Races" isDarkMode={isDarkMode}>
+                <Section testID='all-race-title' title="Query - All Races" isDarkMode={isDarkMode}>
                     Details of all races.
                 </Section>
             </View>

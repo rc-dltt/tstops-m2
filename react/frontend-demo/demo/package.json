@@ -10,11 +10,13 @@
     "test": "jest -u",
     "build:ios": "react-native bundle --entry-file='index.js' --bundle-output='./ios/main.jsbundle' --dev=true --platform='ios'"
   },
+  "setupFiles": ["./jestSetup.js"],
   "dependencies": {
     "@apollo/client": "^3.7.17",
     "@apollo/react-hooks": "^4.0.0",
     "@react-native-async-storage/async-storage": "^1.19.1",
     "@react-native/gradle-plugin": "^0.72.11",
+    "@testing-library/react-native": "^12.2.2",
     "apollo-link-context": "^1.0.20",
     "formik": "^2.4.3",
     "graphql-tag": "^2.12.6",

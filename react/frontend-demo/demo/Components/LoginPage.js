@@ -56,8 +56,8 @@ const LoginPage = ({ onLogin }) => {
 
   const login = async () => {
     try {
-      emailValidateInput();
-      passwordValidateInput();
+      await emailValidateInput();
+      await passwordValidateInput();
       if (!emailErr && !passwordErr) {
         const { data } = await loginUser({ variables: { email: email, password: password } });
         await AsyncStorage.setItem('token', data.login);
@@ -90,6 +90,7 @@ const LoginPage = ({ onLogin }) => {
           </Text>
           <TextInput
             label="Email"
+            testID='email-input'
             value={email}
             onChangeText={text => setEmail(text)}
             textColor="#505f93"
@@ -110,6 +111,7 @@ const LoginPage = ({ onLogin }) => {
           </HelperText>
           <TextInput
             label="Password"
+            testID='password-input'
             value={password}
             onChangeText={text => setPassword(text)}
             secureTextEntry
@@ -130,7 +132,7 @@ const LoginPage = ({ onLogin }) => {
             {passwordErrMsg}
           </HelperText>
 
-          <Button mode="contained" onPress={login} buttonColor="#424d9c" textColor='#fbde2b' style={{ margin: 12 }}>
+          <Button testID='login-btn' mode="contained" onPress={login} buttonColor="#424d9c" textColor='#fbde2b' style={{ margin: 12 }}>
             Login
           </Button>
         </Card.Content>
