@@ -2,7 +2,6 @@ import { React, useState, useCallback } from 'react';
 import {
     StyleSheet,
     useColorScheme,
-    ScrollView,
     View,
     TextInput,
     Text
@@ -37,9 +36,9 @@ const AddRacePage = () => {
         setRaceVenueInput(input);
     };
 
-    const successDialogClose = () => {
-        setAddRaceSuccess(false);
-    }
+    // const successDialogClose = () => {
+    //     setAddRaceSuccess(false);
+    // }
 
     // Submit - Add Race
     const handleSubmitAddRace = () => {
@@ -61,41 +60,46 @@ const AddRacePage = () => {
     };
 
     return (
-        <ScrollView
+        <View
             contentInsetAdjustmentBehavior="automatic"
             style={backgroundStyle}>
-            {/* Mutation - Add Race */}
 
-            <View style={{
-                backgroundColor: isDarkMode ? Colors.black : Colors.white,
-            }}>
-                <Section title="Mutation - Add Race" isDarkMode={isDarkMode}>
-                    Input Race Number, Start Time and Venue to Add Race.
-                </Section>
-            </View>
-            <TextInput
-                style={styles.input}
-                onChangeText={handleRaceNoInputChange}
-                value={raceNoInput}
-                placeholder="Enter Race Number"
-                keyboardType="default"
-            />
-            <TextInput
-                style={styles.input}
-                onChangeText={handleRaceTimeInputChange}
-                value={raceTimeInput}
-                placeholder="Enter Race Start Time"
-                keyboardType="default"
-            />
-            <TextInput
-                style={styles.input}
-                onChangeText={handleRaceVenueInputChange}
-                value={raceVenueInput}
-                placeholder="Enter Race Venue"
-                keyboardType="default"
-            />
-            <Button mode="contained" style={{ margin: 12 }} onPress={handleSubmitAddRace} buttonColor="#424d9c" textColor='#fbde2b' title="submit"><Text>Submit</Text></Button>
+                {/* Mutation - Add Race */}
 
+                <View style={{
+                    backgroundColor: isDarkMode ? Colors.black : Colors.white,
+                }}>
+                    <Section testID='add-race-title' title="Mutation - Add Race" isDarkMode={isDarkMode}>
+                        Input Race Number, Start Time and Venue to Add Race.
+                    </Section>
+                </View>
+                <TextInput
+                    testID='add-race-no-input'
+                    style={styles.input}
+                    onChangeText={handleRaceNoInputChange}
+                    value={raceNoInput}
+                    placeholder="Enter Race Number"
+                    keyboardType="default"
+                />
+                <TextInput
+                    testID='add-race-time-input'
+                    style={styles.input}
+                    onChangeText={handleRaceTimeInputChange}
+                    value={raceTimeInput}
+                    placeholder="Enter Race Start Time"
+                    keyboardType="default"
+                />
+                <TextInput
+                    testID='add-race-venue-input'
+                    style={styles.input}
+                    onChangeText={handleRaceVenueInputChange}
+                    value={raceVenueInput}
+                    placeholder="Enter Race Venue"
+                    keyboardType="default"
+                />
+
+                <Button testID='add-race-btn' mode="contained" style={{ margin: 12 }} onPress={handleSubmitAddRace} buttonColor="#424d9c" textColor='#fbde2b' title="submit"><Text>Submit</Text></Button>
+            
             {/* <Portal>
                 <Dialog visible={addRaceSuccess} onDismiss={successDialogClose}>
                     <Dialog.Title
@@ -117,7 +121,7 @@ const AddRacePage = () => {
                     </Dialog.Actions>
                 </Dialog>
             </Portal> */}
-        </ScrollView>
+        </View>
     );
 
 };

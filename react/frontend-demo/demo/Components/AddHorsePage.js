@@ -1,6 +1,5 @@
 import { React, useState } from 'react';
 import {
-    ScrollView,
     StyleSheet,
     Text,
     useColorScheme,
@@ -65,7 +64,7 @@ const AddHorsePage = () => {
     }
 
     return (
-        <ScrollView
+        <View
             contentInsetAdjustmentBehavior="automatic"
             style={backgroundStyle} >
             {/* Mutation - Add Horse */}
@@ -79,6 +78,7 @@ const AddHorsePage = () => {
                 </Section>
             </View >
             <TextInput
+                testID='add-horse-name-input'
                 style={styles.input}
                 onChangeText={handleHorseNameInputChange}
                 value={horseNameInput}
@@ -86,16 +86,19 @@ const AddHorsePage = () => {
                 keyboardType="default"
             />
             <TextInput
+                testID='add-horse-rank-input'
                 style={styles.input}
                 onChangeText={handleHorseRankInputChange}
                 value={horseRankInput}
                 placeholder="Enter Horse Rank"
                 keyboardType="default"
             />
-            <Button mode="contained" style={{ margin: 12 }} onPress={handleSubmitAddHorse} buttonColor="#424d9c" textColor='#fbde2b' title="submit"><Text>Submit</Text></Button>
+  
+            <Button testID='add-horse-btn' mode="contained" style={{ margin: 12 }} onPress={handleSubmitAddHorse} buttonColor="#424d9c" textColor='#fbde2b' title="submit"><Text>Submit</Text></Button>
             <Portal>
-                <Dialog visible={addHorseSuccess} onDismiss={successDialogClose}>
+                <Dialog testID='add-horse-dialog' visible={addHorseSuccess} onDismiss={successDialogClose}>
                     <Dialog.Title
+                        testID='add-horse-dialog-title'
                         style={{
                             color: "green",
                             textAlignVertical: "center",
@@ -107,14 +110,14 @@ const AddHorsePage = () => {
                     >Add Race Success!
                     </Dialog.Title>
                     <Dialog.Content>
-                        <Text variant="bodyMedium">Successfully Added Horse - {horseNameInput}</Text>
+                        <Text testID='add-horse-dialog-msg' variant="bodyMedium">Successfully Added Horse - {horseNameInput}</Text>
                     </Dialog.Content>
                     <Dialog.Actions>
-                        <Button buttonColor="#424d9c" textColor='#fbde2b' onPress={successDialogClose}>Close</Button>
+                        <Button testID='add-horse-dialog-btn' buttonColor="#424d9c" textColor='#fbde2b' onPress={successDialogClose}>Close</Button>
                     </Dialog.Actions>
                 </Dialog>
             </Portal>
-        </ScrollView >
+        </View >
     );
 
 };

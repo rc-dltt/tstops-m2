@@ -1,10 +1,10 @@
 import React from "react";
-// import { create } from 'react-test-renderer';
 import { MockedProvider } from '@apollo/client/testing';
 import { PaperProvider } from 'react-native-paper';
 import LoginPage from "../Components/LoginPage";
 import { loginMutation } from '../graphql/mutation';
-import { fireEvent, cleanup, render, screen } from "@testing-library/react-native";
+import { fireEvent, cleanup, render, screen, renderHook } from "@testing-library/react-native";
+import { act } from "react-test-renderer";
 
 const mocks = [
     {
@@ -24,7 +24,7 @@ const mocks = [
 ];
 
 beforeEach(() => {
-    
+
     jest.useFakeTimers();
 });
 
@@ -52,7 +52,7 @@ describe('Login Page', () => {
 
         const handleLogin = jest.fn();
 
-        const {getByTestId, getByDisplayValue} = render(
+        const { getByTestId, getByDisplayValue } = render(
             <MockedProvider mocks={mocks} addTypename={false} >
                 <PaperProvider>
                     <LoginPage onLogin={handleLogin} />
@@ -60,9 +60,17 @@ describe('Login Page', () => {
             </MockedProvider>
         );
 
+        // const { result } = renderHook(()=> <LoginPage/>);
         const email = 'johndoe@email.com';
         const pw = 'pAsSWoRd!';
 
+        // act(()=> {
+        //     result.current.setEmail(email)
+        // })
+
+        // act(()=> {
+        //     result.current.setPassword(pw)
+        // })
         const emailInput = getByTestId('email-input');
         const passwordInput = getByTestId('password-input');
         // const loginButton = getByTestId('login-btn');
@@ -83,7 +91,7 @@ describe('Login Page', () => {
         const handleLogin = jest.fn();
         // spyOn(handleLogin, 'setLoggedIn');
 
-        const {getByTestId, getByDisplayValue, findByTestId} = render(
+        const { getByTestId, getByDisplayValue } = render(
             <MockedProvider mocks={mocks} addTypename={false} >
                 <PaperProvider>
                     <LoginPage onLogin={handleLogin} />
@@ -93,21 +101,23 @@ describe('Login Page', () => {
 
         const email = 'johndoe@email.com';
         const pw = 'pAsSWoRd!';
-
         const emailInput = getByTestId('email-input');
         const passwordInput = getByTestId('password-input');
         const loginButton = getByTestId('login-btn');
         fireEvent.changeText(emailInput, email);
         fireEvent.changeText(passwordInput, pw);
-
         const emailInputChanged = getByDisplayValue(email);
         const pwInputChanged = getByDisplayValue(pw);
         expect(emailInputChanged).toBeTruthy();
         expect(pwInputChanged).toBeTruthy();
-        fireEvent.press(loginButton);
+        act(()=> {
+            fireEvent.press(loginButton);
+        })
+        
+
 
         // const newHeader = await findByTestId('all-race-title');
         // expect(handleLogin).toBeCalled();
-        
+
     })
 })

@@ -2,12 +2,11 @@ import { React, useState } from 'react';
 import {
     StyleSheet,
     Text,
-    ScrollView,
     View,
     TextInput,
     useColorScheme
 } from 'react-native';
-import {Button} from 'react-native-paper';
+import { Button } from 'react-native-paper';
 import { useMutation } from '@apollo/client';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import { enrollHorseMutation } from '../graphql/mutation';
@@ -52,19 +51,24 @@ const EnrollHorse = () => {
     };
 
     return (
-        <ScrollView
+        <View
             contentInsetAdjustmentBehavior="automatic"
             style={backgroundStyle}>
+
             {/* Mutation - Enroll Horse */}
 
             <View style={{
                 backgroundColor: isDarkMode ? Colors.black : Colors.white,
             }}>
-                <Section title="Mutation - Enroll Horse" isDarkMode={isDarkMode}>
+                <Section
+                    testID='enrl-header'
+                    title="Mutation - Enroll Horse"
+                    isDarkMode={isDarkMode}>
                     Input Race ID and Horse ID to Enroll Horse.
                 </Section>
             </View>
             <TextInput
+                testID='enrl-race-id-input'
                 style={styles.input}
                 onChangeText={handleRaceIdInputChange}
                 value={raceIdInput}
@@ -72,14 +76,18 @@ const EnrollHorse = () => {
                 keyboardType="default"
             />
             <TextInput
+                testID='enrl-horse-id-input'
                 style={styles.input}
                 onChangeText={handleHorseIdInputChange}
                 value={horseIdInput}
                 placeholder="Enter Horse ID"
                 keyboardType="default"
             />
-          <Button mode="contained" onPress={handleSubmitEnrollHorse} buttonColor="#424d9c" textColor='#fbde2b' style={{ margin: 12 }}><Text>Submit</Text></Button>
-        </ScrollView>
+            <Button testID='enrl-btn' mode="contained" onPress={handleSubmitEnrollHorse} buttonColor="#424d9c" textColor='#fbde2b' style={{ margin: 12 }}>
+                <Text>Submit</Text>
+            </Button>
+
+        </View>
     );
 
 };

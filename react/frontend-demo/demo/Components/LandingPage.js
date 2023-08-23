@@ -37,6 +37,7 @@ const LandingPage = () => {
 
     return (
         <BottomNavigation
+            testID='bottom-nav'
             navigationState={{ index, routes }}
             onIndexChange={setIndex}
             renderScene={renderScene}

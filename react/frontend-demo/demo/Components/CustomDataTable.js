@@ -19,27 +19,28 @@ const CustomDataTable = (props) => {
     const to = Math.min((page + 1) * itemsPerPage, tableData.length);
 
     return (
-        <DataTable>
-            <DataTable.Header>
+        <DataTable testID='table-container'>
+            <DataTable.Header testID='table-header'>
                 {tableTitles && tableTitles.length > 0 ? (
                     tableTitles.map((title, i) => {
                         return (
-                            <DataTable.Title key={i}>{title}</DataTable.Title>
+                            <DataTable.Title testID={`table-title` + title} key={i}>{title}</DataTable.Title>
                         )
                     }
                     )) : ""
                 }
             </DataTable.Header>
 
-            {tableData.slice(from, to).map((item) => (
-                <DataTable.Row key={item.key}>
+            {tableData.slice(from, to).map((item,i) => (
+                <DataTable.Row key={i}>
                     {Object.keys(item).map((key) => (
-                        <DataTable.Cell key={key}>{item[key]}</DataTable.Cell>
+                        <DataTable.Cell testID={`table-cell-`+key} key={key}>{item[key]}</DataTable.Cell>
                     ))}
                 </DataTable.Row>
             ))}
 
             <DataTable.Pagination
+                testID='table-pagination'
                 page={page}
                 numberOfPages={Math.ceil(tableData.length / itemsPerPage)}
                 onPageChange={(page) => setPage(page)}

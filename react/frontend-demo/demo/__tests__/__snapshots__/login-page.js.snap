@@ -21,7 +21,7 @@ exports[`Login Page Snapshot 1`] = `
       }
     }
   >
-    <RCTSafeAreaView
+    <View
       style={
         {
           "backgroundColor": "#F3F3F3",
@@ -34,6 +34,7 @@ exports[`Login Page Snapshot 1`] = `
             "testUri": "../../../img/hkjc-icon.png",
           }
         }
+        testID="login-bgi"
       />
       <View
         collapsable={false}
@@ -107,6 +108,7 @@ exports[`Login Page Snapshot 1`] = `
                     "textAlignVertical": "center",
                   }
                 }
+                testID="login-header"
                 variant="titleLarge"
               >
                 Login
@@ -325,6 +327,7 @@ exports[`Login Page Snapshot 1`] = `
                     "writingDirection": "ltr",
                   }
                 }
+                testID="email-err-msg"
               />
               <View
                 style={
@@ -541,6 +544,7 @@ exports[`Login Page Snapshot 1`] = `
                     "writingDirection": "ltr",
                   }
                 }
+                testID="pw-err-msg"
               />
               <View
                 collapsable={false}
@@ -695,7 +699,7 @@ exports[`Login Page Snapshot 1`] = `
           </View>
         </View>
       </View>
-    </RCTSafeAreaView>
+    </View>
   </View>
   <View
     collapsable={false}
