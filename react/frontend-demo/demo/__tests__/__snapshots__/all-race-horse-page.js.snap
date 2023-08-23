@@ -1,0 +1,128 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`All Race / Horse Page Snapshot Test 1`] = `
+<RNCSafeAreaProvider
+  onInsetsChange={[Function]}
+  style={
+    [
+      {
+        "flex": 1,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    collapsable={false}
+    pointerEvents="box-none"
+    style={
+      {
+        "flex": 1,
+      }
+    }
+  >
+    <RCTScrollView
+      contentInsetAdjustmentBehavior="automatic"
+    >
+      <View>
+        <View
+          style={
+            {
+              "backgroundColor": "#FFF",
+            }
+          }
+        >
+          <View
+            style={
+              {
+                "marginTop": 32,
+                "paddingHorizontal": 24,
+              }
+            }
+          >
+            <Text
+              style={
+                [
+                  {
+                    "fontSize": 24,
+                    "fontWeight": "600",
+                  },
+                  {
+                    "color": "#000",
+                  },
+                ]
+              }
+            >
+              Query - All Races
+            </Text>
+            <Text
+              style={
+                [
+                  {
+                    "fontSize": 18,
+                    "fontWeight": "400",
+                    "marginTop": 8,
+                  },
+                  {
+                    "color": "#444",
+                  },
+                ]
+              }
+            >
+              Details of all races.
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            {
+              "backgroundColor": "#FFF",
+            }
+          }
+        >
+          <View
+            style={
+              {
+                "marginTop": 32,
+                "paddingHorizontal": 24,
+              }
+            }
+          >
+            <Text
+              style={
+                [
+                  {
+                    "fontSize": 24,
+                    "fontWeight": "600",
+                  },
+                  {
+                    "color": "#000",
+                  },
+                ]
+              }
+            >
+              Query - All Horses
+            </Text>
+            <Text
+              style={
+                [
+                  {
+                    "fontSize": 18,
+                    "fontWeight": "400",
+                    "marginTop": 8,
+                  },
+                  {
+                    "color": "#444",
+                  },
+                ]
+              }
+            >
+              Details of all horses.
+            </Text>
+          </View>
+        </View>
+      </View>
+    </RCTScrollView>
+  </View>
+</RNCSafeAreaProvider>
+`;

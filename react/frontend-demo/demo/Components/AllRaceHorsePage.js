@@ -70,9 +70,6 @@ const AllRaceHorsePage = () => {
         }
     }, [horseData]);
 
-    const horseListInit = useReactiveVar(horseListVar);
-    console.log(horseListInit, 'CACHE_LIST')
-
     /////////////////////////////////////////////////////////////////////////////////////////////////////
 
     return (
@@ -84,12 +81,12 @@ const AllRaceHorsePage = () => {
                 style={{
                     backgroundColor: isDarkMode ? Colors.black : Colors.white,
                 }}>
-                <Section title="Query - All Races" isDarkMode={isDarkMode}>
+                <Section testID='all-race-title' title="Query - All Races" isDarkMode={isDarkMode}>
                     Details of all races.
                 </Section>
             </View>
             {raceData && raceData.races.length > 0 ? (
-                <CustomDataTable tableTitles={raceTableTitles} tableData={raceDataResult} />
+                <CustomDataTable testID='all-race-table' tableTitles={raceTableTitles} tableData={raceDataResult} />
             ) : ""}
 
             {
@@ -105,12 +102,12 @@ const AllRaceHorsePage = () => {
                 style={{
                     backgroundColor: isDarkMode ? Colors.black : Colors.white,
                 }}>
-                <Section title="Query - All Horses" isDarkMode={isDarkMode}>
+                <Section testID='all-horse-title' title="Query - All Horses" isDarkMode={isDarkMode}>
                     Details of all horses.
                 </Section>
             </View>
             {horseDataResult && horseDataResult.length > 0 ? (
-                <CustomDataTable tableTitles={horseTableTitles} tableData={horseDataResult} type='horse' />
+                <CustomDataTable testID='all-horse-table' tableTitles={horseTableTitles} tableData={horseDataResult} type='horse' />
             ) : ""}
         </ScrollView>
     );

@@ -1,5 +1,6 @@
 import { React, useState } from 'react';
 import { ApolloProvider } from '@apollo/client';
+import { TouchableWithoutFeedback, Keyboard, View} from 'react-native';
 import { PaperProvider } from 'react-native-paper';
 import LandingPage from './Components/LandingPage';
 import LoginPage from './Components/LoginPage';
@@ -17,7 +18,11 @@ const App = () => {
   return (
     <ApolloProvider client={client}>
       <PaperProvider>
+      <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
+      <View>
       {loggedIn ? <LandingPage /> : <LoginPage onLogin={handleLogin} />}
+      </View>
+      </TouchableWithoutFeedback>
       </PaperProvider>
     </ApolloProvider>
   );
