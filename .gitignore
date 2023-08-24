@@ -1,0 +1,9 @@
+.vs/
+.vscode/
+
+.env
+
+node_modules/
+dist/
+
+.scannerwork/
