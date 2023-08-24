@@ -8,9 +8,12 @@
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest -u",
+    "sonar": "sonar-scanner",
     "build:ios": "react-native bundle --entry-file='index.js' --bundle-output='./ios/main.jsbundle' --dev=true --platform='ios'"
   },
-  "setupFiles": ["./jestSetup.js"],
+  "setupFiles": [
+    "./jestSetup.js"
+  ],
   "dependencies": {
     "@apollo/client": "^3.7.17",
     "@apollo/react-hooks": "^4.0.0",
@@ -42,6 +45,7 @@
     "metro-react-native-babel-preset": "0.76.7",
     "prettier": "^2.4.1",
     "react-test-renderer": "18.2.0",
+    "sonar-scanner": "^3.1.0",
     "typescript": "4.8.4"
   },
   "engines": {
