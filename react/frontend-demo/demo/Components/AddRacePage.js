@@ -4,7 +4,8 @@ import {
     useColorScheme,
     View,
     TextInput,
-    Text
+    Text,
+    ScrollView
 } from 'react-native';
 import { useMutation } from '@apollo/client';
 import { Dialog, Portal, Button } from 'react-native-paper';
@@ -60,7 +61,7 @@ const AddRacePage = () => {
     };
 
     return (
-        <View
+        <ScrollView
             contentInsetAdjustmentBehavior="automatic"
             style={backgroundStyle}>
 
@@ -121,7 +122,7 @@ const AddRacePage = () => {
                     </Dialog.Actions>
                 </Dialog>
             </Portal> */}
-        </View>
+        </ScrollView>
     );
 
 };

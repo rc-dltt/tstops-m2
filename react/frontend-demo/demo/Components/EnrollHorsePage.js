@@ -4,7 +4,8 @@ import {
     Text,
     View,
     TextInput,
-    useColorScheme
+    useColorScheme,
+    ScrollView
 } from 'react-native';
 import { Button } from 'react-native-paper';
 import { useMutation } from '@apollo/client';
@@ -51,7 +52,7 @@ const EnrollHorse = () => {
     };
 
     return (
-        <View
+        <ScrollView
             contentInsetAdjustmentBehavior="automatic"
             style={backgroundStyle}>
 
@@ -87,7 +88,7 @@ const EnrollHorse = () => {
                 <Text>Submit</Text>
             </Button>
 
-        </View>
+        </ScrollView>
     );
 
 };

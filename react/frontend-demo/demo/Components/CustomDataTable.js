@@ -24,7 +24,8 @@ const CustomDataTable = (props) => {
                 {tableTitles && tableTitles.length > 0 ? (
                     tableTitles.map((title, i) => {
                         return (
-                            <DataTable.Title testID={`table-title` + title} key={i}>{title}</DataTable.Title>
+                            <DataTable.Title key={i}>{title}</DataTable.Title>
+                            // <DataTable.Title testID={`table-title` + title} key={i}>{title}</DataTable.Title>
                         )
                     }
                     )) : ""
@@ -34,7 +35,8 @@ const CustomDataTable = (props) => {
             {tableData.slice(from, to).map((item,i) => (
                 <DataTable.Row key={i}>
                     {Object.keys(item).map((key) => (
-                        <DataTable.Cell testID={`table-cell-`+key} key={key}>{item[key]}</DataTable.Cell>
+                        // <DataTable.Cell testID={`table-cell-`+key} key={key}>{item[key]}</DataTable.Cell>
+                        <DataTable.Cell key={key}>{item[key]}</DataTable.Cell>
                     ))}
                 </DataTable.Row>
             ))}

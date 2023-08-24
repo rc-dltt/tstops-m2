@@ -4,7 +4,8 @@ import {
     Text,
     useColorScheme,
     View,
-    TextInput
+    TextInput,
+    ScrollView
 } from 'react-native';
 import { useMutation, useReactiveVar } from '@apollo/client';
 import { Dialog, Portal, Button } from 'react-native-paper';
@@ -64,7 +65,7 @@ const AddHorsePage = () => {
     }
 
     return (
-        <View
+        <ScrollView
             contentInsetAdjustmentBehavior="automatic"
             style={backgroundStyle} >
             {/* Mutation - Add Horse */}
@@ -117,7 +118,7 @@ const AddHorsePage = () => {
                     </Dialog.Actions>
                 </Dialog>
             </Portal>
-        </View >
+        </ScrollView >
     );
 
 };

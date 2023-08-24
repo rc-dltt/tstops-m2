@@ -23,7 +23,7 @@ const AllRaceHorsePage = () => {
     
     const [raceDataResult, setRaceDataResult] = useState([]);
     const [horseDataResult, setHorseDataResult] = useState([]);
-
+    
     //////////// Queries ///////////////
     const { loading: raceDataLoading, data: raceData, error: raceDataErr } = useQuery(allRaceQuery);
     const { loading: horseDataLoading, data: horseData, error: horseDataErr, refetch } = useQuery(allHorseQuery);
@@ -34,7 +34,7 @@ const AllRaceHorsePage = () => {
         "Start Time",
         "Venue"
     ];
-
+    console.log(raceTableTitles, 'all')
     const horseTableTitles = [
         "Horse ID",
         "Horse Name",
@@ -115,7 +115,7 @@ const AllRaceHorsePage = () => {
 
 const Section = (props) => {
     return (
-        <View style={styles.sectionContainer}>
+        <ScrollView style={styles.sectionContainer}>
             <Text
                 style={[
                     styles.sectionTitle,
@@ -134,7 +134,7 @@ const Section = (props) => {
                 ]}>
                 {props.children}
             </Text>
-        </View>
+        </ScrollView>
     );
 };
 const styles = StyleSheet.create({
