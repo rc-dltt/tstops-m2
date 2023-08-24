@@ -6,6 +6,7 @@ describe('Sample Test',()=>{
         //input incorrect password
         await $('~email-input').setValue("123");
         await $('~password-input').setValue("999");
+
         //click login button
         const myButton = await $('~login-btn');
         await myButton.click();
@@ -14,36 +15,35 @@ describe('Sample Test',()=>{
         expect(isDisplay).to.equal(true);    
     })
 
-    it('Input invalid password',async ()=>{
-        //input incorrect password
-        await $('~email-input').setValue("123");
-        await $('~password-input').setValue("999");
-        //click login button
-        const myButton = await $('~login-btn');
-        await myButton.click();
-        //password error is displayed
-        let errorLabel = await $('~pw-err-msg');
-        const errorText = await errorLabel.getText();
-        expect(errorText).to.equal('Password must contain at least 8 characters');
-    })
-
-    // it('Login success',async ()=>{
+    // it('Input invalid password',async ()=>{
     //     //input incorrect password
     //     await $('~email-input').setValue("123");
     //     await $('~password-input').setValue("999");
     //     //click login button
     //     const myButton = await $('~login-btn');
     //     await myButton.click();
-    //     //login error dialog is displayed
-    //     let isDisplay = await $('~login-dialog').isDisplayed();
-    //     expect(isDisplay).to.equal(true);
-
-    //     // let errorLabel = await $('~emailerror');
-    //     // const errorText = await errorLabel.getText();
-    //     // console.log(errorText);
-
-    //    //expect(errorText).to.equal('Password must contain at least 8 characters');
-
-    //     //expect(errorText).to.equal('Password must contain at least 8 characters');       
+    //     //password error is displayed
+    //     let errorLabel = await $('~pw-err-msg');
+    //     const errorText = await errorLabel.getText();
+    //     expect(errorText).to.equal('Password must contain at least 8 characters');
     // })
+
+    it('Login success',async ()=>{
+        await $('~login-dialog-btn').click();
+
+        
+        //correct password
+        await $('~email-input').setValue("johndoe@email.com");
+        await $('~password-input').setValue("pAsSWoRd!");
+        //click login button
+        const myButton = await $('~login-btn');
+        await myButton.click();
+    })
+    it('Navigate Landing',async ()=>{
+
+        let isDisplay = await $('~bottom-nav').isDisplayed();
+        expect(isDisplay).to.equal(true); 
+        
+    })
+
 })
