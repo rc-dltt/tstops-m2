@@ -1,7 +1,7 @@
 import { React, useState } from 'react';
 import {
     StyleSheet,
-    useColorScheme,
+    useColorScheme
 } from 'react-native';
 import { BottomNavigation } from 'react-native-paper';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
@@ -9,8 +9,6 @@ import AllRaceHorsePage from './AllRaceHorsePage';
 import AddRacePage from './AddRacePage';
 import AddHorsePage from './AddHorsePage';
 import EnrollHorsePage from './EnrollHorsePage';
-
-
 
 const LandingPage = () => {
     const isDarkMode = useColorScheme() === 'dark';
@@ -25,6 +23,8 @@ const LandingPage = () => {
         { key: 'addHorse', title: 'Add Horse', focusedIcon: 'horse-variant' },
         { key: 'enrollHorse', title: 'Enroll Horse', focusedIcon: 'calendar-cursor' }
     ]);
+
+    console.log(index, 'Landing')
 
     const renderScene = BottomNavigation.SceneMap({
         allRaceHorse: AllRaceHorsePage,

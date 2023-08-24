@@ -18,11 +18,11 @@ const App = () => {
   return (
     <ApolloProvider client={client}>
       <PaperProvider>
-      <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
-      <View>
+      {/* <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
+      <View> */}
       {loggedIn ? <LandingPage /> : <LoginPage onLogin={handleLogin} />}
-      </View>
-      </TouchableWithoutFeedback>
+      {/* </View>
+      </TouchableWithoutFeedback> */}
       </PaperProvider>
     </ApolloProvider>
   );
