@@ -8,8 +8,7 @@
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest -u",
-    "build:ios1": "react-native bundle --entry-file='index.js' --bundle-output='./ios/main.jsbundle' --dev=true --platform='ios'",
-    "build:ios": "xcodebuild -workspace demo.xcworkspace -scheme demo -configuration Release -sdk iphonesimulator"
+    "build:ios": "react-native bundle --entry-file='index.js' --bundle-output='./ios/main.jsbundle' --dev=true --platform='ios'"
   },
   "setupFiles": [
     "./jestSetup.js"
