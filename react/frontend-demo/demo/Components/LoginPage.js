@@ -28,22 +28,11 @@ const LoginPage = ({ onLogin }) => {
     setErrDialog(false);
   }
 
-  // const emailValidateInput = async () => {
-  //   try {
-  //     await emailValidationSchema.validate({ email });
-  //     handleEmailErrMsg('', false)
-  //   } catch (error) {
-  //     if (error.errors && error.errors[0]) {
-  //       handleEmailErrMsg(error.errors[0], true);
-  //     }
-  //   }
-  // }
-
   const emailValidateInput = async () => {
     try {
       await emailValidationSchema.validate({ email });
       setEmailErrMsg("");
-        setEmailErr(false);
+      setEmailErr(false);
     } catch (error) {
       if (error.errors && error.errors[0]) {
         handleEmailErrMsg();
@@ -53,41 +42,18 @@ const LoginPage = ({ onLogin }) => {
     }
   }
 
-
-  // const handleEmailErrMsg = (msg, bl) => {
-  //   setEmailErrMsg(msg);
-  //   setEmailErr(bl);
-  // }
-
-
-  // const passwordValidateInput = async () => {
-  //   try {
-  //     await passwordValidationSchema.validate({ password });
-  //     handlePwErrMsg('', false);
-  //   } catch (error) {
-  //     if (error.errors && error.errors[0]) {
-  //       handlePwErrMsg(error.errors[0], true);
-  //     }
-  //   }
-  // }
-
   const passwordValidateInput = async () => {
     try {
       await passwordValidationSchema.validate({ password });
       setPasswordErrMsg('');
-    setPasswordErr(false);
+      setPasswordErr(false);
     } catch (error) {
       if (error.errors && error.errors[0]) {
         setPasswordErrMsg(error.errors[0]);
-    setPasswordErr(true);
+        setPasswordErr(true);
       }
     }
   }
-
-  // const handlePwErrMsg = (msg, bl) => {
-  //   setPasswordErrMsg(msg);
-  //   setPasswordErr(bl);
-  // }
 
   const login = async () => {
     try {
@@ -108,6 +74,15 @@ const LoginPage = ({ onLogin }) => {
       <Image
         testID='login-bgi'
         source={require("../img/hkjc-icon.png")}
+        style={{
+          color: "#424d9c",
+          textAlignVertical: "center",
+          textAlign: "center",
+          fontWeight: 'bold',
+          fontSize: 24,
+          marginTop: 12,
+          marginLeft: 120
+        }}
       />
       <Card>
         <Card.Content>
@@ -120,7 +95,7 @@ const LoginPage = ({ onLogin }) => {
               textAlign: "center",
               fontWeight: 'bold',
               fontSize: 24,
-              margin: 12
+              margin: 4
             }}
           >
             Login

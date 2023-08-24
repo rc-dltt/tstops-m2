@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo 'Server Gateway Compose...'
+echo '[ Server Gateway Compose ... ]'
 
 cd server/final/gateway && \
 	npm install && \
@@ -9,22 +9,28 @@ cd server/final/gateway && \
 		--config ./supergraph.yaml \
 		> ./src/supergraph.graphql
 
-echo 'Server Build ...'
+echo '[ Server Build ... ]'
 
-docker compose -f ./server/final/docker-compose.yaml build
+cd ../ && \
+	docker compose -f ./server/final/docker-compose.yaml build
 
-echo 'Server Up ...'
+echo '[ Server Up ... ]'
 
 docker compose -f ./server/final/docker-compose.yaml up -d
 
-echo 'Build iOS ...'
+echo '[ Building iOS ...]'
 
-cd react/frontend-demo/demo/ios && \
+cd ../../
+
+cd react/frontend-demo/demo && \
+	npm install
+
+cd ./ios && \
 	pod install
-	cd react/frontend-demo/demo && \
+
+cd ../ && \
 	npm run build:ios
 
-echo 'Run iOS ...'
+echo '[ Running iOS ... ]'
 
-cd ./react/frontend-demo/demo && \
-	npx react-native run-ios --port 8082
+npx react-native run-ios --port 8082
