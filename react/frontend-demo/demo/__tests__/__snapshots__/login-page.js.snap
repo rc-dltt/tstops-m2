@@ -34,6 +34,12 @@ exports[`Login Page Snapshot 1`] = `
             "testUri": "../../../img/hkjc-icon.png",
           }
         }
+        style={
+          {
+            "marginLeft": 120,
+            "marginTop": 12,
+          }
+        }
         testID="login-bgi"
       />
       <View
@@ -103,7 +109,7 @@ exports[`Login Page Snapshot 1`] = `
                     "color": "#424d9c",
                     "fontSize": 24,
                     "fontWeight": "bold",
-                    "margin": 12,
+                    "margin": 4,
                     "textAlign": "center",
                     "textAlignVertical": "center",
                   }

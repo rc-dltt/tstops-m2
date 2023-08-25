@@ -28,12 +28,6 @@ beforeEach(() => {
     jest.useFakeTimers();
 });
 
-afterEach(() => {
-    // jest.runOnlyPendingTimers();
-    // jest.useRealTimers();
-    // cleanup
-});
-
 describe('Login Page', () => {
     it('Snapshot', () => {
         const handleLogin = jest.fn();
@@ -60,36 +54,24 @@ describe('Login Page', () => {
             </MockedProvider>
         );
 
-        // const { result } = renderHook(()=> <LoginPage/>);
         const email = 'johndoe@email.com';
         const pw = 'pAsSWoRd!';
 
-        // act(()=> {
-        //     result.current.setEmail(email)
-        // })
-
-        // act(()=> {
-        //     result.current.setPassword(pw)
-        // })
         const emailInput = getByTestId('email-input');
         const passwordInput = getByTestId('password-input');
-        // const loginButton = getByTestId('login-btn');
         fireEvent.changeText(emailInput, email);
         fireEvent.changeText(passwordInput, pw);
 
         const emailInputChanged = getByDisplayValue(email);
         const pwInputChanged = getByDisplayValue(pw);
-        // console.log(pwInputChanged, 'PW INPUT')
 
         expect(emailInputChanged).toBeTruthy();
         expect(pwInputChanged).toBeTruthy();
-        // expect(loginButton).toBeTruthy();
     })
 
     it('Login Submit', async () => {
 
         const handleLogin = jest.fn();
-        // spyOn(handleLogin, 'setLoggedIn');
 
         const { getByTestId, getByDisplayValue } = render(
             <MockedProvider mocks={mocks} addTypename={false} >
@@ -113,11 +95,6 @@ describe('Login Page', () => {
         act(()=> {
             fireEvent.press(loginButton);
         })
-        
-
-
-        // const newHeader = await findByTestId('all-race-title');
-        // expect(handleLogin).toBeCalled();
 
     })
 })

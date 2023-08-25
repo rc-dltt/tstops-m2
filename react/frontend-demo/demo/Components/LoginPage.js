@@ -57,8 +57,8 @@ const LoginPage = ({ onLogin }) => {
 
   const login = async () => {
     try {
-      await emailValidateInput();
-      await passwordValidateInput();
+      // await emailValidateInput();
+      // await passwordValidateInput();
       if (!emailErr && !passwordErr) {
         const { data } = await loginUser({ variables: { email: email, password: password } });
         await AsyncStorage.setItem('token', data.login);
@@ -75,11 +75,6 @@ const LoginPage = ({ onLogin }) => {
         testID='login-bgi'
         source={require("../img/hkjc-icon.png")}
         style={{
-          color: "#424d9c",
-          textAlignVertical: "center",
-          textAlign: "center",
-          fontWeight: 'bold',
-          fontSize: 24,
           marginTop: 12,
           marginLeft: 120
         }}

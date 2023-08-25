@@ -21,7 +21,7 @@ exports[`Add Race Page Snapshot Test 1`] = `
       }
     }
   >
-    <View
+    <RCTScrollView
       contentInsetAdjustmentBehavior="automatic"
       style={
         {
@@ -29,128 +29,107 @@ exports[`Add Race Page Snapshot Test 1`] = `
         }
       }
     >
-      <View
-        style={
-          {
-            "backgroundColor": "#FFF",
-          }
-        }
-      >
+      <View>
         <View
           style={
             {
-              "marginTop": 32,
-              "paddingHorizontal": 24,
+              "backgroundColor": "#FFF",
             }
           }
         >
-          <Text
+          <View
             style={
-              [
-                {
-                  "fontSize": 24,
-                  "fontWeight": "600",
-                },
-                {
-                  "color": "#000",
-                },
-              ]
+              {
+                "marginTop": 32,
+                "paddingHorizontal": 24,
+              }
             }
           >
-            Mutation - Add Race
-          </Text>
-          <Text
-            style={
-              [
-                {
-                  "fontSize": 18,
-                  "fontWeight": "400",
-                  "marginTop": 8,
-                },
-                {
-                  "color": "#444",
-                },
-              ]
-            }
-          >
-            Input Race Number, Start Time and Venue to Add Race.
-          </Text>
+            <Text
+              style={
+                [
+                  {
+                    "fontSize": 24,
+                    "fontWeight": "600",
+                  },
+                  {
+                    "color": "#000",
+                  },
+                ]
+              }
+            >
+              Mutation - Add Race
+            </Text>
+            <Text
+              style={
+                [
+                  {
+                    "fontSize": 18,
+                    "fontWeight": "400",
+                    "marginTop": 8,
+                  },
+                  {
+                    "color": "#444",
+                  },
+                ]
+              }
+            >
+              Input Race Number, Start Time and Venue to Add Race.
+            </Text>
+          </View>
         </View>
-      </View>
-      <TextInput
-        keyboardType="default"
-        onChangeText={[Function]}
-        placeholder="Enter Race Number"
-        style={
-          {
-            "borderWidth": 1,
-            "height": 40,
-            "margin": 12,
-            "padding": 10,
+        <TextInput
+          keyboardType="default"
+          onChangeText={[Function]}
+          placeholder="Enter Race Number"
+          style={
+            {
+              "borderWidth": 1,
+              "height": 40,
+              "margin": 12,
+              "padding": 10,
+            }
           }
-        }
-        testID="add-race-no-input"
-        value=""
-      />
-      <TextInput
-        keyboardType="default"
-        onChangeText={[Function]}
-        placeholder="Enter Race Start Time"
-        style={
-          {
-            "borderWidth": 1,
-            "height": 40,
-            "margin": 12,
-            "padding": 10,
+          testID="add-race-no-input"
+          value=""
+        />
+        <TextInput
+          keyboardType="default"
+          onChangeText={[Function]}
+          placeholder="Enter Race Start Time"
+          style={
+            {
+              "borderWidth": 1,
+              "height": 40,
+              "margin": 12,
+              "padding": 10,
+            }
           }
-        }
-        testID="add-race-time-input"
-        value=""
-      />
-      <TextInput
-        keyboardType="default"
-        onChangeText={[Function]}
-        placeholder="Enter Race Venue"
-        style={
-          {
-            "borderWidth": 1,
-            "height": 40,
-            "margin": 12,
-            "padding": 10,
+          testID="add-race-time-input"
+          value=""
+        />
+        <TextInput
+          keyboardType="default"
+          onChangeText={[Function]}
+          placeholder="Enter Race Venue"
+          style={
+            {
+              "borderWidth": 1,
+              "height": 40,
+              "margin": 12,
+              "padding": 10,
+            }
           }
-        }
-        testID="add-race-venue-input"
-        value=""
-      />
-      <View
-        collapsable={false}
-        style={
-          {
-            "backgroundColor": "#424d9c",
-            "borderRadius": 20,
-            "margin": 12,
-            "shadowColor": "#000",
-            "shadowOffset": {
-              "height": 0,
-              "width": 0,
-            },
-            "shadowOpacity": 0,
-            "shadowRadius": 0,
-          }
-        }
-        testID="add-race-btn-container-outer-layer"
-      >
+          testID="add-race-venue-input"
+          value=""
+        />
         <View
           collapsable={false}
           style={
             {
               "backgroundColor": "#424d9c",
-              "borderColor": "transparent",
               "borderRadius": 20,
-              "borderStyle": "solid",
-              "borderWidth": 0,
-              "flex": undefined,
-              "minWidth": 64,
+              "margin": 12,
               "shadowColor": "#000",
               "shadowOffset": {
                 "height": 0,
@@ -160,115 +139,138 @@ exports[`Add Race Page Snapshot Test 1`] = `
               "shadowRadius": 0,
             }
           }
-          testID="add-race-btn-container"
-          title="submit"
+          testID="add-race-btn-container-outer-layer"
         >
           <View
-            accessibilityRole="button"
-            accessibilityState={
-              {
-                "busy": undefined,
-                "checked": undefined,
-                "disabled": false,
-                "expanded": undefined,
-                "selected": undefined,
-              }
-            }
-            accessibilityValue={
-              {
-                "max": undefined,
-                "min": undefined,
-                "now": undefined,
-                "text": undefined,
-              }
-            }
-            accessible={true}
             collapsable={false}
-            focusable={true}
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
             style={
-              [
-                {
-                  "overflow": "hidden",
+              {
+                "backgroundColor": "#424d9c",
+                "borderColor": "transparent",
+                "borderRadius": 20,
+                "borderStyle": "solid",
+                "borderWidth": 0,
+                "flex": undefined,
+                "minWidth": 64,
+                "shadowColor": "#000",
+                "shadowOffset": {
+                  "height": 0,
+                  "width": 0,
                 },
-                {
-                  "borderRadius": 20,
-                },
-              ]
+                "shadowOpacity": 0,
+                "shadowRadius": 0,
+              }
             }
-            testID="add-race-btn"
+            testID="add-race-btn-container"
+            title="submit"
           >
             <View
+              accessibilityRole="button"
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": false,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onFocus={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
               style={
                 [
                   {
-                    "alignItems": "center",
-                    "flexDirection": "row",
-                    "justifyContent": "center",
+                    "overflow": "hidden",
                   },
-                  undefined,
+                  {
+                    "borderRadius": 20,
+                  },
                 ]
               }
+              testID="add-race-btn"
             >
-              <Text
-                numberOfLines={1}
-                selectable={false}
+              <View
                 style={
                   [
                     {
-                      "textAlign": "left",
+                      "alignItems": "center",
+                      "flexDirection": "row",
+                      "justifyContent": "center",
                     },
-                    {
-                      "color": "rgba(28, 27, 31, 1)",
-                      "writingDirection": "ltr",
-                    },
-                    [
-                      [
-                        {
-                          "marginHorizontal": 16,
-                          "marginVertical": 9,
-                          "textAlign": "center",
-                        },
-                        false,
-                        {
-                          "marginHorizontal": 24,
-                          "marginVertical": 10,
-                        },
-                        undefined,
-                        false,
-                        {
-                          "color": "#fbde2b",
-                          "fontFamily": "System",
-                          "fontSize": 14,
-                          "fontWeight": "500",
-                          "letterSpacing": 0.1,
-                          "lineHeight": 20,
-                        },
-                        undefined,
-                      ],
-                      undefined,
-                    ],
+                    undefined,
                   ]
                 }
-                testID="add-race-btn-text"
               >
-                <Text>
-                  Submit
+                <Text
+                  numberOfLines={1}
+                  selectable={false}
+                  style={
+                    [
+                      {
+                        "textAlign": "left",
+                      },
+                      {
+                        "color": "rgba(28, 27, 31, 1)",
+                        "writingDirection": "ltr",
+                      },
+                      [
+                        [
+                          {
+                            "marginHorizontal": 16,
+                            "marginVertical": 9,
+                            "textAlign": "center",
+                          },
+                          false,
+                          {
+                            "marginHorizontal": 24,
+                            "marginVertical": 10,
+                          },
+                          undefined,
+                          false,
+                          {
+                            "color": "#fbde2b",
+                            "fontFamily": "System",
+                            "fontSize": 14,
+                            "fontWeight": "500",
+                            "letterSpacing": 0.1,
+                            "lineHeight": 20,
+                          },
+                          undefined,
+                        ],
+                        undefined,
+                      ],
+                    ]
+                  }
+                  testID="add-race-btn-text"
+                >
+                  <Text>
+                    Submit
+                  </Text>
                 </Text>
-              </Text>
+              </View>
             </View>
           </View>
         </View>
       </View>
-    </View>
+    </RCTScrollView>
   </View>
 </RNCSafeAreaProvider>
 `;

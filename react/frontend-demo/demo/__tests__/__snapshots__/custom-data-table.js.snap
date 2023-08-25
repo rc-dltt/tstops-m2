@@ -79,7 +79,6 @@ exports[`Custom Data Table Snapshot Test 1`] = `
               undefined,
             ]
           }
-          testID="table-titleHorse ID"
         >
           <Text
             numberOfLines={1}
@@ -150,7 +149,6 @@ exports[`Custom Data Table Snapshot Test 1`] = `
               undefined,
             ]
           }
-          testID="table-titleHorse Name"
         >
           <Text
             numberOfLines={1}
@@ -221,7 +219,6 @@ exports[`Custom Data Table Snapshot Test 1`] = `
               undefined,
             ]
           }
-          testID="table-titleHorse Rank"
         >
           <Text
             numberOfLines={1}
@@ -362,7 +359,6 @@ exports[`Custom Data Table Snapshot Test 1`] = `
                 ],
               ]
             }
-            testID="table-cell-id"
           >
             <Text
               numberOfLines={1}
@@ -431,7 +427,6 @@ exports[`Custom Data Table Snapshot Test 1`] = `
                 ],
               ]
             }
-            testID="table-cell-name"
           >
             <Text
               numberOfLines={1}
@@ -500,7 +495,6 @@ exports[`Custom Data Table Snapshot Test 1`] = `
                 ],
               ]
             }
-            testID="table-cell-rank"
           >
             <Text
               numberOfLines={1}

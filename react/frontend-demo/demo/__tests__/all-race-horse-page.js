@@ -4,7 +4,7 @@ import { PaperProvider } from 'react-native-paper';
 import AllRaceHorsePage from "../Components/AllRaceHorsePage";
 import { allRaceQuery, allHorseQuery } from "../graphql/query"
 import { loginMutation } from '../graphql/mutation';
-import { fireEvent, cleanup, render, screen } from "@testing-library/react-native";
+import { render } from "@testing-library/react-native";
 
 const mocks = [
     {
@@ -54,12 +54,6 @@ const mocks = [
 
 beforeEach(() => {
     jest.useFakeTimers();
-});
-
-afterEach(() => {
-    // jest.runOnlyPendingTimers();
-    // jest.useRealTimers();
-    // cleanup
 });
 
 describe('All Race / Horse Page', () => {

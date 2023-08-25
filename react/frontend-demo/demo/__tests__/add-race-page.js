@@ -56,12 +56,6 @@ beforeEach(() => {
     jest.useFakeTimers();
 });
 
-afterEach(() => {
-    // jest.runOnlyPendingTimers();
-    // jest.useRealTimers();
-    // cleanup
-});
-
 describe('Add Race Page', () => {
     it('Snapshot Test', () => {
         const addRacePage = render(

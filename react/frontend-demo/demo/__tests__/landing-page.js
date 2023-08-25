@@ -56,12 +56,6 @@ beforeEach(() => {
     jest.useFakeTimers();
 });
 
-afterEach(() => {
-    // jest.runOnlyPendingTimers();
-    // jest.useRealTimers();
-    // cleanup
-});
-
 describe('Landing Page', () => {
     it('Snapshot Test', () => {
         const landingPage = render(

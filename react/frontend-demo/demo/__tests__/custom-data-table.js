@@ -68,12 +68,6 @@ beforeEach(() => {
     jest.useFakeTimers();
 });
 
-afterEach(() => {
-    // jest.runOnlyPendingTimers();
-    // jest.useRealTimers();
-    // cleanup
-});
-
 describe('Custom Data Table', () => {
     it('Snapshot Test', () => {
         const dataTable = render(

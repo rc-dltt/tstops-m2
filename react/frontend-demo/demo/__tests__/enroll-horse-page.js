@@ -56,12 +56,6 @@ beforeEach(() => {
     jest.useFakeTimers();
 });
 
-afterEach(() => {
-    // jest.runOnlyPendingTimers();
-    // jest.useRealTimers();
-    // cleanup
-});
-
 describe('Enroll Horse Page', () => {
     it('Snapshot Test', () => {
         const enrollHorsePage = render(
