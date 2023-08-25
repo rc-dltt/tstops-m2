@@ -1,0 +1,2 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1635131219437,1754,API Demo - POST,415,Unsupported Media Type,Thread Group 2-1,text,false,Test failed: text expected to contain /Success/,362,262,1,1,http://fakerestapi.azurewebsites.net/api/v1/Users,1748,0,1451

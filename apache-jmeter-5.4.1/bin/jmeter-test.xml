@@ -1,0 +1,12 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1633946111457,190,Global Weather API,200,OK,Thread Group 2-1,text,true,,824,199,1,2,"http://api.openweathermap.org/data/2.5/weather?q=hong%20kong,cn&appid=90b921b2fef5c71521ffdfa9b5af8240",190,0,119
+1633946111651,38,Global Weather API,200,OK,Thread Group 2-1,text,true,,802,194,1,2,"http://api.openweathermap.org/data/2.5/weather?q=london,uk&appid=90b921b2fef5c71521ffdfa9b5af8240",38,0,0
+1633946111689,38,Global Weather API,200,OK,Thread Group 2-1,text,true,,807,193,1,2,"http://api.openweathermap.org/data/2.5/weather?q=paris,fr&appid=90b921b2fef5c71521ffdfa9b5af8240",38,0,0
+1633946111728,37,Global Weather API,200,OK,Thread Group 2-1,text,true,,806,193,1,2,"http://api.openweathermap.org/data/2.5/weather?q=tokyo,jp&appid=90b921b2fef5c71521ffdfa9b5af8240",37,0,0
+1633946111765,110,Global Weather API,200,OK,Thread Group 2-1,text,true,,814,194,1,2,"http://api.openweathermap.org/data/2.5/weather?q=boston,us&appid=90b921b2fef5c71521ffdfa9b5af8240",110,0,0
+1633946111876,52,Global Weather API,200,OK,Thread Group 2-1,text,true,,857,198,1,2,"http://api.openweathermap.org/data/2.5/weather?q=washington,us&appid=90b921b2fef5c71521ffdfa9b5af8240",52,0,0
+1633946111929,41,Global Weather API,200,OK,Thread Group 2-1,text,true,,844,195,1,2,"http://api.openweathermap.org/data/2.5/weather?q=beijing,cn&appid=90b921b2fef5c71521ffdfa9b5af8240",41,0,0
+1633946111971,60,Global Weather API,200,OK,Thread Group 2-1,text,true,,823,198,1,2,"http://api.openweathermap.org/data/2.5/weather?q=manchester,uk&appid=90b921b2fef5c71521ffdfa9b5af8240",60,0,0
+1633946112037,43,Global Weather API,200,OK,Thread Group 2-1,text,true,,824,199,1,2,"http://api.openweathermap.org/data/2.5/weather?q=hong%20kong,cn&appid=90b921b2fef5c71521ffdfa9b5af8240",43,0,0
+1633946112082,46,Global Weather API,200,OK,Thread Group 2-1,text,true,,802,194,1,2,"http://api.openweathermap.org/data/2.5/weather?q=london,uk&appid=90b921b2fef5c71521ffdfa9b5af8240",46,0,0
+1633946111457,707,API Demo - POST,415,Unsupported Media Type,Thread Group 1-1,text,false,Test failed: text expected to contain /Success/,362,262,1,1,http://fakerestapi.azurewebsites.net/api/v1/Users,706,0,483

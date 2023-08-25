@@ -1,0 +1,11 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1633491074595,78,Global Weather API,200,OK,Thread Group 1-1,text,true,,815,199,1,1,"http://api.openweathermap.org/data/2.5/weather?q=hong%20kong,cn&appid=90b921b2fef5c71521ffdfa9b5af8240",78,0,40
+1633491074678,36,Global Weather API,200,OK,Thread Group 1-1,text,true,,814,194,1,1,"http://api.openweathermap.org/data/2.5/weather?q=london,uk&appid=90b921b2fef5c71521ffdfa9b5af8240",36,0,0
+1633491074716,37,Global Weather API,200,OK,Thread Group 1-1,text,true,,812,193,1,1,"http://api.openweathermap.org/data/2.5/weather?q=paris,fr&appid=90b921b2fef5c71521ffdfa9b5af8240",37,0,0
+1633491074754,39,Global Weather API,200,OK,Thread Group 1-1,text,true,,814,193,1,1,"http://api.openweathermap.org/data/2.5/weather?q=tokyo,jp&appid=90b921b2fef5c71521ffdfa9b5af8240",39,0,0
+1633491074795,36,Global Weather API,200,OK,Thread Group 1-1,text,true,,813,194,1,1,"http://api.openweathermap.org/data/2.5/weather?q=boston,us&appid=90b921b2fef5c71521ffdfa9b5af8240",36,0,0
+1633491074833,36,Global Weather API,200,OK,Thread Group 1-1,text,true,,860,198,1,1,"http://api.openweathermap.org/data/2.5/weather?q=washington,us&appid=90b921b2fef5c71521ffdfa9b5af8240",36,0,0
+1633491074871,38,Global Weather API,200,OK,Thread Group 1-1,text,true,,860,195,1,1,"http://api.openweathermap.org/data/2.5/weather?q=beijing,cn&appid=90b921b2fef5c71521ffdfa9b5af8240",38,0,0
+1633491074911,38,Global Weather API,200,OK,Thread Group 1-1,text,true,,819,198,1,1,"http://api.openweathermap.org/data/2.5/weather?q=manchester,uk&appid=90b921b2fef5c71521ffdfa9b5af8240",38,0,0
+1633491074951,38,Global Weather API,200,OK,Thread Group 1-1,text,true,,815,199,1,1,"http://api.openweathermap.org/data/2.5/weather?q=hong%20kong,cn&appid=90b921b2fef5c71521ffdfa9b5af8240",38,0,0
+1633491074991,38,Global Weather API,200,OK,Thread Group 1-1,text,true,,814,194,1,1,"http://api.openweathermap.org/data/2.5/weather?q=london,uk&appid=90b921b2fef5c71521ffdfa9b5af8240",38,0,0

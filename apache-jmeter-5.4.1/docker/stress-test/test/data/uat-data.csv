@@ -1,0 +1,2 @@
+threadSize,testCase,protocol,endpoint,port,appId,txnld,accNum,accNumInvalid,accNumNotFound,normalResponse
+150,1.1,https,tbshk.apps.ocp-usmf-01.ftn.bochkuatcloud.com,,MBKHK,SUM0A,1.28752E+12,12345,1.23457E+16,"[ { ""accountNum"": { ""value"": ""00001287520249298"" }, ""balances"": [ { ""type"": ""BALANCE"", ""currency"": ""HKD"", ""amount"": ""0.00"", ""hkdEquivAmount"": ""0.00"", ""isPositive"": true }, { ""type"": ""AVAIL_BALANCE"", ""currency"": ""HKD"", ""amount"": ""0.00"", ""hkdEquivAmount"": ""0.00"", ""isPositive"": true } ] } ]"
