@@ -1065,3 +1065,51 @@ org.apache.jorphan.util.JMeterStopTestException: Invalid duration 0 set in Threa
 2023-08-25 13:17:19,678 INFO o.a.j.s.FileServer: Set new base='/Users/dtso/Desktop/HKJC-Train/tstops-m2/jmeter-test'
 2023-08-25 13:17:19,678 INFO o.a.j.s.SaveService: Loading file: /Users/dtso/Desktop/HKJC-Train/tstops-m2/jmeter-test/test-script.jmx
 2023-08-25 13:17:19,819 INFO o.a.j.s.FileServer: Set new base='/Users/dtso/Desktop/HKJC-Train/tstops-m2/jmeter-test'
+2023-08-25 15:13:07,389 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2023-08-25 15:13:07,408 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2023-08-25 15:13:07,425 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2023-08-25 15:13:08,980 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : GraphQL Mutation & Query Test
+2023-08-25 15:13:08,980 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group GraphQL Mutation & Query Test.
+2023-08-25 15:13:08,980 INFO o.a.j.e.StandardJMeterEngine: Thread will stop on error
+2023-08-25 15:13:08,981 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=0 delayedStart=false
+2023-08-25 15:13:08,983 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2023-08-25 15:13:08,983 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2023-08-25 15:13:08,986 INFO o.a.j.t.JMeterThread: Thread started: GraphQL Mutation & Query Test 1-1
+2023-08-25 15:13:08,988 INFO o.a.j.s.FileServer: Stored: ./jmeter-test/data/data.csv
+2023-08-25 15:13:08,991 ERROR o.a.j.t.JMeterThread: Test failed!
+java.lang.IllegalArgumentException: Could not read file header line for file ./jmeter-test/data/data.csv
+	at org.apache.jmeter.services.FileServer.reserveFile(FileServer.java:283) ~[ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.config.CSVDataSet.initVars(CSVDataSet.java:216) ~[ApacheJMeter_components.jar:5.4.1]
+	at org.apache.jmeter.config.CSVDataSet.iterationStart(CSVDataSet.java:171) ~[ApacheJMeter_components.jar:5.4.1]
+	at org.apache.jmeter.control.GenericController.fireIterationStart(GenericController.java:399) ~[ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.control.GenericController.fireIterEvents(GenericController.java:391) ~[ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.control.GenericController.next(GenericController.java:160) ~[ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.control.LoopController.next(LoopController.java:134) ~[ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.threads.AbstractThreadGroup.next(AbstractThreadGroup.java:91) ~[ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:254) [ApacheJMeter_core.jar:5.4.1]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_301]
+Caused by: java.lang.IllegalArgumentException: File data.csv must exist and be readable
+	at org.apache.jmeter.services.FileServer.createBufferedReader(FileServer.java:424) ~[ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.services.FileServer.readLine(FileServer.java:340) ~[ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.services.FileServer.readLine(FileServer.java:324) ~[ApacheJMeter_core.jar:5.4.1]
+	at org.apache.jmeter.services.FileServer.reserveFile(FileServer.java:272) ~[ApacheJMeter_core.jar:5.4.1]
+	... 9 more
+2023-08-25 15:13:08,993 INFO o.a.j.t.JMeterThread: Thread finished: GraphQL Mutation & Query Test 1-1
+2023-08-25 15:13:08,993 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2023-08-25 15:13:08,993 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2023-08-25 15:13:25,602 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2023-08-25 15:13:25,603 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2023-08-25 15:13:25,603 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2023-08-25 15:13:25,833 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : GraphQL Mutation & Query Test
+2023-08-25 15:13:25,834 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group GraphQL Mutation & Query Test.
+2023-08-25 15:13:25,834 INFO o.a.j.e.StandardJMeterEngine: Thread will stop on error
+2023-08-25 15:13:25,834 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=0 delayedStart=false
+2023-08-25 15:13:25,835 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2023-08-25 15:13:25,835 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2023-08-25 15:13:25,836 INFO o.a.j.t.JMeterThread: Thread started: GraphQL Mutation & Query Test 1-1
+2023-08-25 15:13:25,836 INFO o.a.j.s.FileServer: Stored: /Users/dtso/Desktop/HKJC-Train/tstops-m2/jmeter-test/data/data.csv
+2023-08-25 15:13:26,719 INFO o.a.j.t.JMeterThread: Thread is done: GraphQL Mutation & Query Test 1-1
+2023-08-25 15:13:26,719 INFO o.a.j.t.JMeterThread: Thread finished: GraphQL Mutation & Query Test 1-1
+2023-08-25 15:13:26,720 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2023-08-25 15:13:26,720 INFO o.a.j.s.FileServer: Close: /Users/dtso/Desktop/HKJC-Train/tstops-m2/jmeter-test/data/data.csv
+2023-08-25 15:13:26,724 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
