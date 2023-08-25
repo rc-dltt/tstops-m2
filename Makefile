@@ -23,6 +23,6 @@ client-build-ios:
 	cd react/frontend-demo/demo/ios && \
 	pod install
 	cd react/frontend-demo/demo && \
-	npm run build:ios1
+	npm run build:ios
 
 run-ios: server-up client-ios

@@ -15,19 +15,6 @@ describe('Sample Test',()=>{
         expect(isDisplay).to.equal(true);    
     })
 
-    // it('Input invalid password',async ()=>{
-    //     //input incorrect password
-    //     await $('~email-input').setValue("123");
-    //     await $('~password-input').setValue("999");
-    //     //click login button
-    //     const myButton = await $('~login-btn');
-    //     await myButton.click();
-    //     //password error is displayed
-    //     let errorLabel = await $('~pw-err-msg');
-    //     const errorText = await errorLabel.getText();
-    //     expect(errorText).to.equal('Password must contain at least 8 characters');
-    // })
-
     it('Login success',async ()=>{
         await $('~login-dialog-btn').click();
 
